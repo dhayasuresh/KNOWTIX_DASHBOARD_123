@@ -1,0 +1,244 @@
+/* --- General Dashboard Wrapper --- */
+.dashboard-wrapper {
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fa;
+}
+
+/* --- Hero Section --- */
+.dashboard-hero {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  background: linear-gradient(135deg, #36A2EB, #6FC3DF);
+  flex-wrap: wrap;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.hero-img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  color: #fff;
+  margin: 0 0 10px 0;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #f0f0f0;
+}
+
+/* --- Dashboard Layout --- */
+.dashboard-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dashboard-left {
+  flex: 3;
+}
+
+.dashboard-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* --- Chart Cards Grid (2 per row, rectangular) --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 rectangular cards per row */
+  gap: 25px;
+}
+
+/* --- Graph Cards --- */
+.card.square-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 450px;      /* taller rectangle for better charts */
+  width: 100%;            /* full width of grid column */
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card.square-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.square-card h3 {
+  margin: 0;
+  padding: 18px 24px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #36A2EB, #FF6384);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.square-card .recharts-wrapper {
+  flex: 1;                /* chart takes remaining card height */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Calendar & Resources Cards --- */
+/* --- Calendar & Resources Cards --- */
+.card.calendar-card,
+.card.resources-card {
+  background: linear-gradient(135deg, #ffffff, #e0f7fa);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  width: 100%;            /* match chart card width */
+  min-height: 450px;      /* match chart card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.card.calendar-card h3,
+.card.resources-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Make calendar take remaining height */
+.card.calendar-card .react-calendar {
+  flex: 1;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make Quick Resources list scrollable if needed */
+.card.resources-card .resources-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.resources-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.resource-badge {
+  padding: 8px 16px;
+  border-radius: 25px;
+  background-color: #FFD6A5;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resource-badge:hover {
+  background: linear-gradient(90deg, #36A2EB, #FF6384);
+  color: #fff;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .square-card .recharts-wrapper {
+    height: 350px;
+  }
+  .hero-img {
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+  .square-card .recharts-wrapper {
+    height: 300px;
+  }
+  .hero-img {
+    width: 300px;
+    height: 200px;
+  }
+  .hero-text h1 {
+    font-size: 28px;
+  }
+  .hero-text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .square-card .recharts-wrapper {
+    height: 250px;
+  }
+  .hero-img {
+    width: 200px;
+    height: 140px;
+  }
+  .hero-text h1 {
+    font-size: 24px;
+  }
+  .hero-text p {
+    font-size: 14px;
+  }
+}
+
+.edu-quote {
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 4px solid #36A2EB;
+  background-color: #f0f8ff;
+  border-radius: 12px;
+  font-style: italic;
+  color: #333;
+  font-size: 14px;
+  text-align: left;
+}
+
+
+
+.subject-details {
+  background: #f8f9fa;
+  border-left: 5px solid #1E90FF;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: left;
+  border-radius: 12px;
+}
+
+.subject-details h3 {
+  color: #1E90FF;
+  margin-bottom: 10px;
+}
+
+.subject-details p {
+  font-size: 16px;
+  margin: 5px 0;
+}

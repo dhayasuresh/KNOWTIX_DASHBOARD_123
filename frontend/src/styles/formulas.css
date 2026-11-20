@@ -1,0 +1,131 @@
+/*Formulas-sheet-css*/
+.page {
+  padding:20px;
+  font-family: 'Georgia', serif;
+  background: #f5f8ff;
+  color: #000;
+   max-width: 2000px;
+    margin: 0 auto;
+}
+
+h1.subject-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 10px;
+  color: #007bff;
+}
+
+.subject-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.subject-btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.subject-btn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.subject-btn.active {
+  background: #007bff;
+  color: #fff;
+  border: 2px solid #0056b3;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.action-buttons button {
+  padding: 8px 20px;
+  cursor: pointer;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.action-buttons button:hover {
+  background: #0056b3;
+}
+
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.formula-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+  page-break-inside: avoid;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.formula-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  background: #e6f0ff;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #007bff;
+  color: #007bff;
+  font-size: 1.1rem;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body p {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.card-body p strong {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) { .formula-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .formula-grid { grid-template-columns: 1fr; } }
+
+/* Print & PDF styles */
+@media print {
+  body { background: #fff; }
+  .formula-grid { grid-template-columns: 1fr; }
+  .formula-card { box-shadow: none; border: 1px solid #000; }
+  .card-header { background: #fff; border-bottom: 1px solid #000; }
+  .action-buttons, .subject-buttons { display: none; }
+}
+

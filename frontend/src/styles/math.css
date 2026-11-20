@@ -1,0 +1,177 @@
+/*============ math tools-css==============*/
+/* ==========================
+   PAGE CONTAINER
+========================== */
+.page {
+  margin:0 auto ; /* sidebar width */
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .page {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
+
+/* ==========================
+   CARDS CONTAINER
+========================== */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* ==========================
+   MATH CARDS
+========================== */
+.math-card {
+  flex: 1 1 300px; /* min width 300px, grow */
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.math-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.math-card h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.math-card input {
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(0,0,0,0.2);
+  font-size: 1rem;
+  width: 100%;
+}
+
+.math-card button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.math-card button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.math-card ul {
+  padding-left: 1.2rem;
+}
+
+.math-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ==========================
+   FORMULA SHEET
+========================== */
+.math-container {
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(0,0,0,0.2);
+  font-size: 1rem;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.formula-sheet {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.formula-sheet table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.formula-sheet th, 
+.formula-sheet td {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.formula-sheet thead {
+  background: #6366f1;
+  color: #fff;
+}
+
+.formula-sheet tbody tr:hover {
+  background: #f0f4ff;
+}
+
+.formula-sheet tbody td button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #22d3ee;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.formula-sheet tbody td button:hover {
+  background: #1fb9c7;
+  transform: scale(1.05);
+}
+
+.saved-notes {
+  margin-top: 2rem;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.saved-notes h2 {
+  margin-bottom: 1rem;
+}
+
+.saved-notes ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.saved-notes li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+}

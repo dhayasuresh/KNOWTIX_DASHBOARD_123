@@ -1,0 +1,29 @@
+.venv/
+**/node_modules/
+**/dist/
+**/__pycache__/
+*.pyc
+
+.env
+.env.*
+!.env.example
+backend/.env
+
+backend/users.db
+backend/users.json
+backend/*.csv
+backend/temp/
+backend/uploads/
+
+
+# Ignore nested duplicate project
+/knowtix-dashboard(1)/
+
+# Ignore local databases and generated files
+db.json
+backend/*.db
+backend/*.json
+backend/*.csv
+backend/temp/
+backend/uploads/
+

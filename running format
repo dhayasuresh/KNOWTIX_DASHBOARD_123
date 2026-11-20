@@ -1,0 +1,38 @@
+>running procedure :
+>frontend
+
+"terminal -1"
+cd frontend
+npm run dev
+
+>backend
+
+"terminal -2"
+cd backend
+node server.js
+
+"terminal -3"
+cd backend
+node index.js
+
+"terminal -4"
+cd backend
+node code-runner.js
+
+"terminal -5"
+cd backend
+node maserver.js
+
+"terminal -6"
+cd backend
+node authserver.js
+
+"terminal -7"
+cd backend
+node testDB.js
+node viewDB.js
+
+>SQlite DB
+in search bar type ">SQlite Open DB"
+select:backend\user.db
+leftside it will appear
